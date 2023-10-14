@@ -1,0 +1,39 @@
+:root {
+  --white: #FFFFFF;
+  --black: #3C3C3C;
+  --gray: #D6D6D6;
+  --pink: #C76F89;
+  --pink-50: #FBC9D8;
+  --pink-40: #FCD6E1;
+  --yellow: #F8F6F2;
+  --green: #99CB9A;
+
+
+  // theme colors
+  --main-text: var(--black);
+  --main-text-inv: var(--white);
+  --main-bg: var(--white);
+  --main-bg-inv: var(--black);
+  --accent: var(--pink);
+  --btn-color: var(--black);
+  --btn-bg: var(--pink-40);
+  --btn-hover-bg: var(--pink-50);
+  --scroll-top-btn-color: var(--accent);
+  --scroll-top-icon-color: var(--white);
+  --border: var(--gray);
+
+  // vendor vars
+
+  // other vars
+  --mobile-min-width: 360px;
+  --main-font: "Poppins";
+  --burger-position: none;
+  --burger-middle-position: none;
+  --burger-dashoffset: 0;
+}
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1600px;

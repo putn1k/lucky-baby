@@ -1,0 +1,41 @@
+.header-site-nav {
+  overflow: hidden;
+
+  & ul {
+    @include list-reset;
+
+    margin-bottom: 40px;
+
+    & li {
+      margin-bottom: 24px;
+    }
+
+    & a {
+      text-decoration-color: transparent;
+    }
+  }
+
+  @include media-min ($md) {
+    & ul {
+      display: flex;
+      margin-bottom: 0;
+
+      &>li {
+        margin-bottom: 0;
+        margin-left: 40px;
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    & ul {
+      & a {
+        transition: color 0.15s ease-in-out;
+
+        &:hover {
+          color: var(--accent);
+        }
+      }
+    }
+  }
+}

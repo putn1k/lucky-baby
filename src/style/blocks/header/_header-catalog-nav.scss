@@ -1,0 +1,35 @@
+.header-catalog-nav {
+  overflow: hidden;
+
+  & ul {
+    @include list-reset;
+
+    display: grid;
+    row-gap: 24px;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--border);
+
+    & a {
+      font-weight: 500;
+      text-transform: uppercase;
+      text-decoration-color: transparent;
+    }
+  }
+
+  @include media-min ($xl) {
+    & ul {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      border-bottom: none;
+
+      & a {
+        transition: color 0.15s ease-in-out;
+
+        &:hover {
+          color: var(--accent);
+        }
+      }
+    }
+  }
+}

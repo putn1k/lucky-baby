@@ -1,0 +1,37 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--btn-fz, 14px);
+  font-weight: 500;
+  line-height: 1.4;
+  padding: var(--btn-offset, var(--btn-offset-vertical, 14px) var(--btn-offset-horizontal, 28px));
+  color: var(--btn-color);
+  background-color: var(--btn-bg);
+  border-radius: 99em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color var(--btn-timing, .2s) ease-in-out;
+
+  & svg {
+    margin-right: 12px;
+  }
+
+  &--icon-reverse {
+    & svg {
+      margin-right: 0;
+      margin-left: 12px;
+    }
+  }
+
+
+  @include media-min ($xl) {
+    font-size: var(--btn-fz, 16px);
+    padding: var(--btn-offset, var(--btn-offset-vertical, 22px) var(--btn-offset-horizontal, 55px));
+    transition: color .15s ease-in-out, background-color .2s ease-in-out, box-shadow .2s ease-in-out;
+
+    &:hover {
+      background-color: var(--btn-hover-bg);
+    }
+  }
+}

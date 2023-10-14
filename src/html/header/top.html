@@ -1,0 +1,41 @@
+<div class="site-header__row">
+  <div class="site-header__logo">
+    <a href="page-main.html">
+      <img src="img/sprite.svg#logo"
+           width="166"
+           height="36"
+           alt="Lucky Baby">
+    </a>
+  </div>
+  <div class="site-header__tablet-contact-list">
+    @include('contact-list.html')
+  </div>
+  <div class="site-header__top-cart header-cart">
+    @include('cart.html')
+  </div>
+  <div class="site-header__burger">
+    <button class="btn-reset"
+            type="button"
+            aria-label="Menu"
+            data-trigger="nav">
+      <span class="burger">
+        <svg class="burger__icon"
+             width="30"
+             viewBox="0 0 50 50"
+             aria-hidden="true">
+          <path class="burger__line burger__line--top"
+                d="M7 9.5H43.2105C46.5807 9.5 50 12.2586 50 17.0692C50 21.8798 47.5313 24.5 43.2105 24.5H25" />
+          <path class="burger__line burger__line--middle"
+                d="m 7,25 h 36" />
+          <path class="burger__line burger__line--bottom"
+                d="M43 40.5H6.78947C6.78947 40.5 0 39.7451 0 32.6264C0 25.5076 6.78947 24.5 6.78947 24.5H25" />
+        </svg>
+      </span>
+    </button>
+  </div>
+  <div class="site-header__site-nav site-header__site-nav--is-not-tablet text-sm"
+       data-popup="nav">
+    @include('site-nav.html')
+    @include('contact-list.html')
+  </div>
+</div>

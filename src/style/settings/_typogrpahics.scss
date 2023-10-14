@@ -1,0 +1,86 @@
+body {
+  font-family: var(--main-font), Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--main-text);
+  background-color: var(--main-bg);
+}
+
+a {
+  color: inherit;
+}
+
+b,
+strong,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+.text-sm {
+  font-size: 12px;
+}
+
+.is-accent {
+  color: var(--accent);
+}
+
+.title-lg {
+  font-size: 36px;
+  line-height: 0.9;
+  font-weight: 500;
+}
+
+.title-md {
+  font-size: 24px;
+  line-height: 0.9;
+  font-weight: 500;
+}
+
+.title-sm {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+@include media-min ($md) {
+  .title-lg {
+    font-size: 55px;
+  }
+
+  .title-md {
+    font-size: 33px;
+  }
+
+  .title-sm {
+    font-size: 18px;
+  }
+}
+
+@include media-min ($xl) {
+  body {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .text-sm {
+    font-size: 14px;
+  }
+
+  .title-lg {
+    font-size: 70px;
+  }
+
+  .title-md {
+    font-size: 46px;
+  }
+
+  .title-sm {
+    font-size: 24px;
+  }
+}
