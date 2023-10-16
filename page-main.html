@@ -143,6 +143,54 @@
         </div>
       </div>
     </header>
+    <header class="fix-site-header">
+      <div class="container fix-site-header__inner">
+        <div class="fix-site-header__catalog-btn">
+          <button class="btn-reset btn" type="button" data-trigger="catalog-fix">
+            <span class="burger">
+              <svg class="burger__icon" width="30" viewBox="0 0 50 50" aria-hidden="true">
+                <path class="burger__line burger__line--top" d="M7 9.5H43.2105C46.5807 9.5 50 12.2586 50 17.0692C50 21.8798 47.5313 24.5 43.2105 24.5H25" />
+                <path class="burger__line burger__line--middle" d="m 7,25 h 36" />
+                <path class="burger__line burger__line--bottom" d="M43 40.5H6.78947C6.78947 40.5 0 39.7451 0 32.6264C0 25.5076 6.78947 24.5 6.78947 24.5H25" />
+              </svg>
+            </span>
+            <span>Catalog</span>
+          </button>
+        </div>
+        <div class="fix-site-header__cart header-cart">
+          <a class="header-cart__link" href="page-cart.html">
+            <svg width="35" height="35" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-cart"></use>
+            </svg>
+            <span class="header-cart__count">1</span>
+          </a>
+        </div>
+        <div class="fix-site-header__nav container" data-popup="catalog-fix">
+          <nav class="header-catalog-nav">
+            <ul>
+              <li>
+                <a href="page-products.html">Pacifier Holders & Teethers</a>
+              </li>
+              <li>
+                <a href="page-products.html">Pacifier Cases</a>
+              </li>
+              <li>
+                <a href="page-products.html">Sensory Toys</a>
+              </li>
+              <li>
+                <a href="page-products.html">Infant Shoes</a>
+              </li>
+              <li>
+                <a href="page-products.html">Gift Bundles</a>
+              </li>
+              <li>
+                <a href="page-products.html">Accessories</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
     <div class="site__content">
       <main>
         <section class="main-first">
@@ -155,6 +203,114 @@
                 </div>
               </div>
               <img class="main-first__cover" src="img/mock/main-first-cover.jpg" alt="" aria-hidden="true">
+            </div>
+          </div>
+        </section>
+        <section class="bestsellers">
+          <div class="container">
+            <h2 class="indent-reset title-md bestsellers__title">Bestsellers</h2>
+            <div class="bestsellers__products slider">
+              <ul class="list-reset bestsellers__products-wrapper swiper-wrapper slider__wrapper">
+                <li class="swiper-slide bestsellers__product product-card">
+                  <a class="product-card__link" href="page-product.html"><span class="visually-hidden">More</span></a>
+                  <div class="product-card__image">
+                    <img src="img/mock/product-img.jpg" alt="">
+
+                    <span class="product-card__badge">Sale</span>
+
+                  </div>
+                  <h3 class="indent-reset title-sm product-card__title">Pacifier Holder - White Sheep</h3>
+                  <div class="product-card__price">
+
+                    <del>
+                      <span>AED</span>
+                      <span>125, 00</span>
+                    </del>
+                    <ins>
+                      <span>AED</span>
+                      <span>105, 00</span>
+                    </ins>
+
+
+                  </div>
+                </li>
+                <li class="swiper-slide bestsellers__product product-card">
+                  <a class="product-card__link" href="page-product.html"><span class="visually-hidden">More</span></a>
+                  <div class="product-card__image">
+                    <img src="img/mock/product-img.jpg" alt="">
+
+                  </div>
+                  <h3 class="indent-reset title-sm product-card__title">Pacifier Holder</h3>
+                  <div class="product-card__price">
+
+
+                    <div class="product-card__price">
+                      <span>AED</span>
+                      <span>125, 00</span>
+                    </div>
+
+                  </div>
+                </li>
+                <li class="swiper-slide bestsellers__product product-card">
+                  <a class="product-card__link" href="page-product.html"><span class="visually-hidden">More</span></a>
+                  <div class="product-card__image">
+                    <img src="img/mock/product-img.jpg" alt="">
+
+                    <span class="product-card__badge">Sale</span>
+
+                  </div>
+                  <h3 class="indent-reset title-sm product-card__title">Pacifier Holder - White Sheep</h3>
+                  <div class="product-card__price">
+
+                    <del>
+                      <span>AED</span>
+                      <span>125, 00</span>
+                    </del>
+                    <ins>
+                      <span>AED</span>
+                      <span>105, 00</span>
+                    </ins>
+
+
+                  </div>
+                </li>
+                <li class="swiper-slide bestsellers__product product-card">
+                  <a class="product-card__link" href="page-product.html"><span class="visually-hidden">More</span></a>
+                  <div class="product-card__image">
+                    <img src="img/mock/product-img.jpg" alt="">
+
+                  </div>
+                  <h3 class="indent-reset title-sm product-card__title">Pacifier Holder</h3>
+                  <div class="product-card__price">
+
+
+                    <div class="product-card__price">
+                      <span>AED</span>
+                      <span>125, 00</span>
+                    </div>
+
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="bestsellers__link">
+              <a class="btn" href="page-shop.html">See all products</a>
+            </div>
+          </div>
+        </section>
+        <section class="about-us wavy wavy--bottom">
+          <div class="container">
+            <div class="about-us__inner">
+              <div class="about-us__img">
+                <img src="img/mock/about-us-cover.jpg" alt="">
+              </div>
+              <div class="about-us__content">
+                <h2 class="indent-reset title-md about-us__title">About us</h2>
+                <p class="indent-reset title-sm about-us__lead-text">Let me tell you the story of Lucky Baby, a brand of silicone baby accessories for the tiniest munchkins, created by none other than yours truly</p>
+                <div class="about-us__text">
+                  <p>My main goal was to provide relief from teething pain and support the development of motor skills in babies. It all started when I crafted the very first pacifier holder for my own little one and boy, did it work like magic! That success propelled me to share my creation with other parents, and Lucky Baby quickly became a hit among parents in the UAE. Now, Lucky Baby continues to bring smiles, comfort, and ease to little ones and their families.</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
