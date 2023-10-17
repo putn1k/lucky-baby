@@ -786,8 +786,6 @@ h6 {
 
 .wavy {
   position: relative;
-
-  overflow: hidden;
 }
 .wavy::before,
 .wavy::after {
@@ -805,10 +803,15 @@ h6 {
 }
 .wavy--top::after {
   content: "";
+  top: -1px;
+
+  background-position: center bottom;
 }
 .wavy--bottom::after {
   content: "";
-  bottom: 0;
+  bottom: -1px;
+
+  background-position: center top;
 }
 
 .burger {
@@ -1552,4 +1555,12 @@ h6 {
   .about-us__inner {
     min-height: 810px;
   }
+}
+
+.advantages {
+  padding-top: 30px;
+
+  color: var(--second-bright-color);
+
+  background-color: var(--second-bright-bg);
 }
