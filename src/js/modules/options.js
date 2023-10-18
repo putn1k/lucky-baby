@@ -24,8 +24,8 @@ export const Options = {
   },
   Observer: {
     Header: {
-      rootMargin: '300px',
-      threshold: 1
+      rootMargin: '100px',
+      threshold: 0
     },
     ScrollTop: {
       rootMargin: '600px',
@@ -36,18 +36,31 @@ export const Options = {
     HandlerURL: 'https://jsonplaceholder.typicode.com/posts',
   },
   Swiper: {
-    Services: {
-      navigation: {
-        prevEl: '.services__slider-controls [data-to-slide="prev"]',
-        nextEl: '.services__slider-controls [data-to-slide="next"]',
+    Bestsellers: {
+      slidesPerView: 1.4,
+      breakpoints: {
+        576: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        1600: {
+          slidesPerView: 4,
+        },
       },
-      pagination: {
-        el: '.services__slider-pagination',
-        clickable: true,
-      },
+    },
+    Blog: {
+      slidesPerView: 1,
       breakpoints: {
         768: {
           slidesPerView: 2,
+        },
+        1200: {
+          slidesPerView: 3,
+        },
+        1600: {
+          slidesPerView: 4,
         },
       },
     },

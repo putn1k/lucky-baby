@@ -1,0 +1,44 @@
+.main-blog {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__articles {
+    margin-bottom: 40px;
+  }
+
+  @include media-min ($md) {
+    &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    &__articles {
+      flex-basis: 100%;
+      order: 3;
+    }
+
+    &__link {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    &__title {
+      margin-bottom: 60px;
+    }
+  }
+
+  @include media-min ($xxl) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}

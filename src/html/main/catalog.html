@@ -1,0 +1,17 @@
+<section class="bestsellers">
+  <div class="container">
+    <h2 class="indent-reset title-md bestsellers__title">Bestsellers</h2>
+    <div class="bestsellers__products slider">
+      <ul class="list-reset swiper-wrapper slider__wrapper">
+        @include('../common/product-card.html', {tag: 'li', title: 'Pacifier Holder - White Sheep', className: 'swiper-slide bestsellers__product ', isPromo: true, isLazy: true})
+        @include('../common/product-card.html', {tag: 'li', title: 'Pacifier Holder', className: 'swiper-slide bestsellers__product ', isLazy: true})
+        @include('../common/product-card.html', {tag: 'li', title: 'Pacifier Holder - White Sheep', className: 'swiper-slide bestsellers__product ', isPromo: true, isLazy: true})
+        @include('../common/product-card.html', {tag: 'li', title: 'Pacifier Holder', className: 'swiper-slide bestsellers__product ', isLazy: true})
+      </ul>
+    </div>
+    <div class="bestsellers__link">
+      <a class="btn"
+         href="page-shop.html">See all products</a>
+    </div>
+  </div>
+</section>

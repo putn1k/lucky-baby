@@ -1,0 +1,34 @@
+<@if(context.tag){@tag}@if(!context.tag){div} class="@if(context.className){@className}product-card">
+  <a class="product-card__link"
+     href="page-product.html"><span class="visually-hidden">More</span></a>
+  <div class="product-card__image">
+    <img @if(context.isLazy){class="swiper-lazy"
+         }
+         @if(context.isLazy){data-}src="img/mock/product-img.jpg"
+         loading="lazy"
+         alt="">
+    @if(context.isLazy){<div class="swiper-lazy-preloader"></div>}
+    @if(context.isPromo) {
+    <span class="product-card__badge">Sale</span>
+    }
+  </div>
+  <h3 class="indent-reset title-sm product-card__title">@title</h3>
+  <div class="product-card__price">
+    @if(context.isPromo){
+    <del>
+      <span>AED</span>
+      <span>125, 00</span>
+    </del>
+    <ins>
+      <span>AED</span>
+      <span>105, 00</span>
+    </ins>
+    }
+    @if(!context.isPromo) {
+    <div class="product-card__price">
+      <span>AED</span>
+      <span>125, 00</span>
+    </div>
+    }
+  </div>
+</@if(context.tag){@tag}@if(!context.tag){div}>

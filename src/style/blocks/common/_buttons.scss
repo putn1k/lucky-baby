@@ -24,11 +24,10 @@
     }
   }
 
-
   @include media-min ($xl) {
     font-size: var(--btn-fz, 16px);
     padding: var(--btn-offset, var(--btn-offset-vertical, 22px) var(--btn-offset-horizontal, 55px));
-    transition: color .15s ease-in-out, background-color .2s ease-in-out, box-shadow .2s ease-in-out;
+    transition: background-color .2s ease-in-out;
 
     &:hover {
       background-color: var(--btn-hover-bg);

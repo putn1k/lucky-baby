@@ -1,0 +1,76 @@
+.about-us {
+  --pb: 20px;
+  --wavy-height: 80px;
+  --wavy-pattern: url('../img/default/wave.svg');
+  --content-pb: calc(var(--wavy-height) + var(--pb));
+
+  &__img {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 10px;
+    padding-bottom: 100%;
+    border-radius: 24px;
+
+    & img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    padding: 45px 20px var(--content-pb) 30px;
+    color: var(--first-bright-color);
+    background-color: var(--first-bright-bg);
+    border-radius: 24px 24px 0 0;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__lead-text {
+    margin-bottom: 32px;
+  }
+
+  &__text {
+    @include cms-text;
+  }
+
+  @include media-min ($md) {
+    --wavy-height: 90px;
+
+    &__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: stretch;
+      column-gap: 30px;
+      min-height: 660px;
+    }
+
+    &__img {
+      height: auto;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-radius: 24px 24px 0 0;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__content {
+      padding: 60px;
+      padding-bottom: var(--content-pb);
+    }
+  }
+
+  @include media-min ($xxl) {
+    --wavy-height: 140px;
+
+    &__inner {
+      min-height: 810px;
+    }
+  }
+}

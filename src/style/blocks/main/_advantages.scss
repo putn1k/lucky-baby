@@ -1,0 +1,107 @@
+.advantages {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: var(--second-bright-color);
+  background-color: var(--second-bright-bg);
+
+  &__title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__list {
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 10px;
+    padding: 30px 20px;
+    padding-top: 90px;
+    color: var(--mait-text);
+    background-color: var(--main-bg);
+    border-radius: 24px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 25px;
+      left: 20px;
+      width: 72px;
+      height: 46px;
+      background-image: url("data:image/svg+xml,%3Csvg width='78' height='60' viewBox='0 0 78 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M75.1371 32.2126C75.1371 41.2264 61.7722 48.5224 61.2031 48.8238C61.053 48.9045 60.8854 48.9467 60.715 48.9467C60.5447 48.9467 60.377 48.9045 60.227 48.8238C59.6578 48.5224 46.293 41.2264 46.293 32.2126C46.2954 30.096 47.1373 28.0667 48.634 26.57C50.1307 25.0733 52.1599 24.2314 54.2766 24.229C56.9357 24.229 59.2638 25.3725 60.715 27.3053C62.1662 25.3725 64.4944 24.229 67.1534 24.229C69.2701 24.2314 71.2994 25.0733 72.7961 26.57C74.2928 28.0667 75.1347 30.096 75.1371 32.2126Z' fill='%23FBF5D9'/%3E%3Cpath d='M52.4096 19.6836C54.504 33.9918 34.9843 48.6788 34.1509 49.2894C33.9315 49.4523 33.6752 49.5584 33.4048 49.5979C33.1344 49.6375 32.8584 49.6094 32.6015 49.5162C31.628 49.1701 8.71767 40.6942 6.62318 26.3859C6.13513 23.0254 7 19.6086 9.02805 16.885C11.0561 14.1613 14.0817 12.3534 17.4411 11.8578C21.662 11.2399 25.6233 12.514 28.3761 15.2449C30.2306 11.8396 33.6605 9.48353 37.8814 8.86566C41.2419 8.37761 44.6588 9.24248 47.3824 11.2705C50.106 13.2986 51.9139 16.3242 52.4096 19.6836Z' fill='%23FCD6E1'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 14px;
+  }
+
+  &__benefits {
+    margin-bottom: 25px;
+    max-width: 797px;
+  }
+
+  @include media-min ($md) {
+    &__title {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 60px;
+      max-width: 730px;
+    }
+
+    &__list {
+      margin-bottom: 60px;
+    }
+
+    &__item {
+      padding-top: 120px;
+
+      &::before {
+        width: 113px;
+        height: 71px;
+      }
+    }
+
+    &__benefits {
+      margin-bottom: 32px;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-bottom: 60px;
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-bottom: 90px;
+    }
+
+    &__benefits {
+      margin-bottom: 50px;
+    }
+  }
+
+  @include media-min ($xxl) {
+    padding-bottom: 90px;
+
+    &__benefits {
+      margin-bottom: 0;
+    }
+
+    &__bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__bottom-decor {
+      flex-shrink: 0;
+      margin-left: 60px;
+    }
+  }
+}

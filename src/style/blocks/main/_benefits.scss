@@ -1,0 +1,36 @@
+.benefits {
+  &__lead {
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    margin-bottom: 25px;
+  }
+
+  &__note {
+    padding: 40px;
+    border-radius: 24px;
+    color: var(--first-bright-color);
+    background-color: var(--first-bright-bg);
+  }
+
+  @include media-min ($md) {
+    &__lead {
+      margin-bottom: 35px;
+    }
+
+    &__list {
+      margin-bottom: 35px;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__lead {
+      margin-bottom: 70px;
+    }
+
+    &__list {
+      margin-bottom: 60px;
+    }
+  }
+}

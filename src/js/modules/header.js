@@ -1,8 +1,11 @@
 import {
+  Options,
+} from './options.js';
+import {
   isEscKey,
 } from './utils.js';
 
-export const initPopupMenus = () => {
+const initPopupMenus = () => {
   const popupTriggerNode = document.querySelectorAll( '[data-trigger]' );
 
   function hideAll() {
@@ -58,4 +61,25 @@ export const initPopupMenus = () => {
   };
 
   popupTriggerNode.forEach( setupPopup );
+};
+
+const initFixHeader = () => {
+  const siteHeader = document.querySelector( '.site-header' );
+  const fixSiteHeader = document.querySelector( '.fix-site-header' );
+
+  const cb = ( entries ) => {
+    entries.forEach( ( entry ) => {
+      if ( !entry.isIntersecting ) {
+        fixSiteHeader.classList.add( 'is-visible' );
+      } else {
+        fixSiteHeader.classList.remove( 'is-visible' );
+      }
+    } );
+  };
+  new IntersectionObserver( cb, Options.Observer.Header ).observe( siteHeader );
+};
+
+export {
+  initPopupMenus,
+  initFixHeader
 };

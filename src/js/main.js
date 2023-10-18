@@ -8,6 +8,7 @@ import {
 
 import {
   initPopupMenus,
+  initFixHeader
 } from './modules/header.js';
 
 import {
@@ -18,12 +19,18 @@ import {
   validateForms
 } from './modules/validate.js';
 
+import {
+  initSliders,
+} from './modules/slider.js';
+
 document.addEventListener( 'DOMContentLoaded', () => {
   iosVhFix();
+  initFixHeader();
   window.addEventListener( 'load', () => {
     initModals();
     initScrollTop();
     validateForms();
     initPopupMenus();
+    initSliders();
   } );
 } );
