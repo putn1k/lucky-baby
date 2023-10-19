@@ -143,6 +143,38 @@ input[type=checkbox].visually-hidden {
   --burger-position: rotate(135deg);
 }
 
+.page-title {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .page-title {
+    margin-bottom: 40px;
+  }
+}
+
+.shop-list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  gap: 30px;
+  grid-template-columns: repeat(var(--product-cols, 2), 1fr);
+}
+@media (min-width: 768px) {
+  .shop-list {
+    --product-cols: 3;
+  }
+}
+@media (min-width: 1600px) {
+  .shop-list {
+    --product-cols: 4;
+  }
+}
+
 body {
   font-weight: 400;
   font-size: 14px;
@@ -379,8 +411,30 @@ h6 {
 .site__content {
   flex-grow: 1;
 }
+.site__entry {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
 .site__footer {
   flex-shrink: 0;
+}
+@media (min-width: 768px) {
+  .site__entry {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .site__entry {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+}
+@media (min-width: 1600px) {
+  .site__entry {
+    padding-top: 60px;
+    padding-bottom: 120px;
+  }
 }
 
 .btn {
@@ -474,26 +528,25 @@ h6 {
 }
 
 .breadcrumbs {
-  padding-top: 20px;
+  padding-top: 30px;
 
-  color: var(--theme-text);
+  color: var(--main-text);
+
+  opacity: 0.6;
 }
 .breadcrumbs a {
   color: inherit;
 
   text-decoration-color: transparent;
 }
-.breadcrumbs .current-item {
-  opacity: 0.6;
-}
 @media (min-width: 768px) {
   .breadcrumbs {
-    padding-top: 32px;
+    padding-top: 40px;
   }
 }
 @media (min-width: 1200px) {
   .breadcrumbs {
-    padding-top: 70px;
+    padding-top: 60px;
   }
   .breadcrumbs a {
     transition: color 0.2s ease-in-out, text-decoration-color 0.2s ease-in-out;
@@ -505,6 +558,9 @@ h6 {
   }
 }
 
+.pagination {
+  padding-top: 30px;
+}
 .pagination .screen-reader-text {
   position: absolute;
 
@@ -525,7 +581,7 @@ h6 {
 }
 .pagination .nav-links {
   display: flex;
-  justify-content: flex-start;
+  justify-content: var(--pagination-align, center);
   align-items: stretch;
   margin: -4px;
 }
@@ -538,30 +594,37 @@ h6 {
   margin: 4px;
   padding: 0 8px;
 
+  font-weight: 500;
   font-size: 18px;
-  color: var(--theme-text);
+  color: var(--main-text);
   text-decoration: none;
 
   background-color: transparent;
   border-radius: 5px;
 }
 .pagination .page-numbers.current {
-  background-color: var(--light-blue);
+  background-color: var(--btn-bg);
 }
 .pagination .page-numbers.prev,
 .pagination .page-numbers.next {
   align-self: center;
   width: 24px;
+  min-width: auto;
   height: 24px;
+  padding: 0;
 
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: 12px 12px;
 }
 .pagination .page-numbers.prev {
+  margin-right: 20px;
+
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.6012 22.8L17.2813 21L8.40125 12L17.2813 3L15.6013 1.2L4.80125 12L15.6012 22.8Z' fill='%23110E2C'/%3E%3C/svg%3E");
 }
 .pagination .page-numbers.next {
+  margin-left: 20px;
+
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.39875 1.2L6.71875 3L15.5987 12L6.71875 21L8.39875 22.8L19.1987 12L8.39875 1.2Z' fill='%23110E2C'/%3E%3C/svg%3E");
 }
 .pagination .page-numbers.dots {
@@ -574,6 +637,9 @@ h6 {
   pointer-events: none;
 }
 @media (min-width: 768px) {
+  .pagination {
+    padding-top: 40px;
+  }
   .pagination .page-numbers {
     font-size: 20px;
   }
@@ -583,8 +649,11 @@ h6 {
   }
 }
 @media (min-width: 1200px) {
+  .pagination {
+    padding-top: 80px;
+  }
   .pagination .page-numbers {
-    font-size: 24px;
+    font-size: 22px;
   }
   .pagination .page-numbers.dots {
     -webkit-transform: translateY(-7px);
@@ -2023,5 +2092,34 @@ h6 {
   .main-blog {
     padding-top: 120px;
     padding-bottom: 120px;
+  }
+}
+
+.blog {
+  --pagination-align: flex-start;
+}
+.blog__list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  gap: 30px;
+  grid-template-columns: repeat(var(--blog-cols, 1), 1fr);
+}
+@media (min-width: 768px) {
+  .blog__list {
+    --blog-cols: 2;
+  }
+}
+@media (min-width: 1200px) {
+  .blog__list {
+    --blog-cols: 3;
+  }
+}
+@media (min-width: 1600px) {
+  .blog__list {
+    --blog-cols: 4;
   }
 }

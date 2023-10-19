@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style/vendor-bundle.css">
+  <link rel="stylesheet" href="style/main.css">
+  <title>Shop Page</title>
+</head>
+
+<body class="indent-reset site">
+  <div aria-hidden="true" id="site-top"></div>
+  <div class="site__container">
+    <header class="site__header site-header">
+      <div class="container">
+        <div class="site-header__row">
+          <div class="site-header__logo">
+            <a href="page-main.html">
+              <img src="img/sprite.svg#logo" width="166" height="36" alt="Lucky Baby">
+            </a>
+          </div>
+          <div class="site-header__tablet-contact-list">
+            <ul class="site-header__contact-list">
+              <li>
+                <a href="#">Instagram</a>
+              </li>
+              <li>
+                <a href="mailto:info@luckybaby.ae">info@luckybaby.ae</a>
+              </li>
+            </ul>
+          </div>
+          <div class="site-header__top-cart header-cart">
+            <a class="header-cart__link" href="page-cart.html">
+              <svg width="35" height="35" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-cart"></use>
+              </svg>
+              <span class="header-cart__count">1</span>
+            </a>
+          </div>
+          <div class="site-header__burger">
+            <button class="btn-reset" type="button" aria-label="Menu" data-trigger="nav">
+              <span class="burger">
+                <svg class="burger__icon" width="30" viewBox="0 0 50 50" aria-hidden="true">
+                  <path class="burger__line burger__line--top" d="M7 9.5H43.2105C46.5807 9.5 50 12.2586 50 17.0692C50 21.8798 47.5313 24.5 43.2105 24.5H25" />
+                  <path class="burger__line burger__line--middle" d="m 7,25 h 36" />
+                  <path class="burger__line burger__line--bottom" d="M43 40.5H6.78947C6.78947 40.5 0 39.7451 0 32.6264C0 25.5076 6.78947 24.5 6.78947 24.5H25" />
+                </svg>
+              </span>
+            </button>
+          </div>
+          <div class="site-header__site-nav site-header__site-nav--is-not-tablet text-sm" data-popup="nav">
+            <nav class="header-site-nav">
+              <ul>
+                <li>
+                  <a href="page-blog.html">Blog</a>
+                </li>
+                <li>
+                  <a href="page-faq.html">FAQ</a>
+                </li>
+                <li>
+                  <a href="page-contact.html">Contact Us</a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="site-header__contact-list">
+              <li>
+                <a href="#">Instagram</a>
+              </li>
+              <li>
+                <a href="mailto:info@luckybaby.ae">info@luckybaby.ae</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="site-header__row site-header__row--bordered">
+          <div class="site-header__catalog-btn">
+            <button class="btn-reset btn" type="button" data-trigger="catalog">
+              <span class="burger">
+                <svg class="burger__icon" width="30" viewBox="0 0 50 50" aria-hidden="true">
+                  <path class="burger__line burger__line--top" d="M7 9.5H43.2105C46.5807 9.5 50 12.2586 50 17.0692C50 21.8798 47.5313 24.5 43.2105 24.5H25" />
+                  <path class="burger__line burger__line--middle" d="m 7,25 h 36" />
+                  <path class="burger__line burger__line--bottom" d="M43 40.5H6.78947C6.78947 40.5 0 39.7451 0 32.6264C0 25.5076 6.78947 24.5 6.78947 24.5H25" />
+                </svg>
+              </span>
+              <span>Catalog</span>
+            </button>
+          </div>
+          <div class="site-header__cart header-cart">
+            <a class="header-cart__link" href="page-cart.html">
+              <svg width="35" height="35" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-cart"></use>
+              </svg>
+              <span class="header-cart__count">1</span>
+            </a>
+          </div>
+          <div class="site-header__site-nav-bottom">
+            <nav class="header-site-nav">
+              <ul>
+                <li>
+                  <a href="page-blog.html">Blog</a>
+                </li>
+                <li>
+                  <a href="page-faq.html">FAQ</a>
+                </li>
+                <li>
+                  <a href="page-contact.html">Contact Us</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="site-header__catalog-nav" data-popup="catalog">
+            <nav class="header-catalog-nav">
+              <ul>
+                <li>
+                  <a href="page-products.html">Pacifier Holders & Teethers</a>
+                </li>
+                <li>
+                  <a href="page-products.html">Pacifier Cases</a>
+                </li>
+                <li>
+                  <a href="page-products.html">Sensory Toys</a>
+                </li>
+                <li>
+                  <a href="page-products.html">Infant Shoes</a>
+                </li>
+                <li>
+                  <a href="page-products.html">Gift Bundles</a>
+                </li>
+                <li>
+                  <a href="page-products.html">Accessories</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <header class="fix-site-header">
+      <div class="container fix-site-header__inner">
+        <div class="fix-site-header__catalog-btn">
+          <button class="btn-reset btn" type="button" data-trigger="catalog-fix">
+            <span class="burger">
+              <svg class="burger__icon" width="30" viewBox="0 0 50 50" aria-hidden="true">
+                <path class="burger__line burger__line--top" d="M7 9.5H43.2105C46.5807 9.5 50 12.2586 50 17.0692C50 21.8798 47.5313 24.5 43.2105 24.5H25" />
+                <path class="burger__line burger__line--middle" d="m 7,25 h 36" />
+                <path class="burger__line burger__line--bottom" d="M43 40.5H6.78947C6.78947 40.5 0 39.7451 0 32.6264C0 25.5076 6.78947 24.5 6.78947 24.5H25" />
+              </svg>
+            </span>
+            <span>Catalog</span>
+          </button>
+        </div>
+        <div class="fix-site-header__cart header-cart">
+          <a class="header-cart__link" href="page-cart.html">
+            <svg width="35" height="35" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-cart"></use>
+            </svg>
+            <span class="header-cart__count">1</span>
+          </a>
+        </div>
+        <div class="fix-site-header__nav container" data-popup="catalog-fix">
+          <nav class="header-catalog-nav">
+            <ul>
+              <li>
+                <a href="page-products.html">Pacifier Holders & Teethers</a>
+              </li>
+              <li>
+                <a href="page-products.html">Pacifier Cases</a>
+              </li>
+              <li>
+                <a href="page-products.html">Sensory Toys</a>
+              </li>
+              <li>
+                <a href="page-products.html">Infant Shoes</a>
+              </li>
+              <li>
+                <a href="page-products.html">Gift Bundles</a>
+              </li>
+              <li>
+                <a href="page-products.html">Accessories</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="site__content">
+      <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+        <div class="container">
+          <a href="page-main.html">Main</a>&ensp;&#47;&ensp;<span class="current-item">Shop</span>
+        </div>
+      </div>
+      <main class="site__entry">
+        <section>
+          <div class="container">
+            <h1 class="title-md page-title">Shop</h1>
+            <ul class="shop-list">
+              <li class="product-card">
+                <a class="product-card__link" href="page-product.html"><span class="visually-hidden">More</span></a>
+                <div class="product-card__image">
+                  <img src="img/mock/product-img.jpg" loading="lazy" alt="">
+
+
+                  <span class="product-card__badge">Sale</span>
+
+                </div>
+                <h3 class="indent-reset title-sm product-card__title">Pacifier Holder - White Sheep</h3>
+                <div class="product-card__price">
+
+                  <del>
+                    <span>AED</span>
+                    <span>125, 00</span>
+                  </del>
+                  <ins>
+                    <span>AED</span>
+                    <span>105, 00</span>
+                  </ins>
+
+
+                </div>
+              </li>
+              <li class="product-card">
+                <a class="product-card__link" href="page-product.html"><span class="visually-hidden">More</span></a>
+                <div class="product-card__image">
+                  <img src="img/mock/product-img.jpg" loading="lazy" alt="">
+
+
+                </div>
+                <h3 class="indent-reset title-sm product-card__title">Pacifier Holder</h3>
+                <div class="product-card__price">
+
+
+                  <div class="product-card__price">
+                    <span>AED</span>
+                    <span>125, 00</span>
+                  </div>
+
+                </div>
+              </li>
+              <li class="product-card">
+                <a class="product-card__link" href="page-product.html"><span class="visually-hidden">More</span></a>
+                <div class="product-card__image">
+                  <img src="img/mock/product-img.jpg" loading="lazy" alt="">
+
+
+                  <span class="product-card__badge">Sale</span>
+
+                </div>
+                <h3 class="indent-reset title-sm product-card__title">Pacifier Holder - White Sheep</h3>
+                <div class="product-card__price">
+
+                  <del>
+                    <span>AED</span>
+                    <span>125, 00</span>
+                  </del>
+                  <ins>
+                    <span>AED</span>
+                    <span>105, 00</span>
+                  </ins>
+
+
+                </div>
+              </li>
+              <li class="product-card">
+                <a class="product-card__link" href="page-product.html"><span class="visually-hidden">More</span></a>
+                <div class="product-card__image">
+                  <img src="img/mock/product-img.jpg" loading="lazy" alt="">
+
+
+                </div>
+                <h3 class="indent-reset title-sm product-card__title">Pacifier Holder</h3>
+                <div class="product-card__price">
+
+
+                  <div class="product-card__price">
+                    <span>AED</span>
+                    <span>125, 00</span>
+                  </div>
+
+                </div>
+              </li>
+            </ul>
+            <nav class="navigation pagination">
+              <h2 class="screen-reader-text">Products</h2>
+              <div class="nav-links">
+                <a class="prev page-numbers" href="#"></a>
+                <span aria-current="page" class="page-numbers current">1</span>
+                <a class="page-numbers" href="#">2</a>
+                <a class="page-numbers" href="#">3</a>
+                <span class="page-numbers dots">…</span>
+                <a class="page-numbers" href="#">7</a>
+                <a class="next page-numbers" href="#"></a>
+              </div>
+            </nav>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer class="site__footer site-footer">
+      <div class="container">
+        <div class="site-footer__main">
+          <div class="site-footer__logo">
+            <a href="page-main.html">
+              <img src="img/sprite.svg#logo-light" width="166" height="36" alt="Lucky Baby">
+            </a>
+            <div class="site-footer__logo-text text-sm">Dubai, United Arab Emirates</div>
+          </div>
+          <nav class="site-footer__nav">
+            <div class="site-footer__catalog-nav">
+              <ul>
+                <li>
+                  <a href="page-products.html">Pacifier Holders & Teethers</a>
+                </li>
+                <li>
+                  <a href="page-products.html">Pacifier Cases</a>
+                </li>
+                <li>
+                  <a href="page-products.html">Sensory Toys</a>
+                </li>
+                <li>
+                  <a href="page-products.html">Infant Shoes</a>
+                </li>
+                <li>
+                  <a href="page-products.html">Gift Bundles</a>
+                </li>
+                <li>
+                  <a href="page-products.html">Accessories</a>
+                </li>
+              </ul>
+            </div>
+            <ul>
+              <li>
+                <a href="page-blog.html">Blog</a>
+              </li>
+              <li>
+                <a href="page-faq.html">FAQ</a>
+              </li>
+              <li>
+                <a href="page-contact.html">Contact Us</a>
+              </li>
+            </ul>
+          </nav>
+          <div>
+            <button class="btn-reset btn" type="button">Get in touch</button>
+          </div>
+        </div>
+        <div class="site-footer__copyright text-sm">
+          <div>2023 &copy; Lucky Baby Accessories</div>
+          <div><a href="page-policy.html" target="_blank" rel="nofollow noreferer noopener">Privacy policy</a></div>
+        </div>
+      </div>
+    </footer>
+    <div class="scroll-top" id="scroll-top">
+      <a class="scroll-top__link" href="#site-top" aria-label="Scroll to top">
+        <svg width="20" height="10" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#icon-up"></use>
+        </svg>
+      </a>
+    </div>
+    <div class="hystmodal hystmodal--simple" id="send-ok-modal" aria-hidden="true">
+      <div class="hystmodal__wrap">
+        <div class="hystmodal__window hystmodal__window--form" role="dialog" aria-modal="true">
+          <div class="modal">
+            <button class="btn-reset modal__close" type="button" aria-label="Close window" data-hystclose>
+              <svg class="modal__close-icon" width="15" height="15" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-cross"></use>
+              </svg>
+            </button>
+            <div class="title-md modal__title">Message sent successfully!</div>
+            <div class="modal__status-text">The manager will contact you shortly to clarify the details.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hystmodal hystmodal--simple" id="send-error-modal" aria-hidden="true">
+      <div class="hystmodal__wrap">
+        <div class="hystmodal__window hystmodal__window--form" role="dialog" aria-modal="true">
+          <div class="modal">
+            <button class="btn-reset modal__close" type="button" aria-label="Close window" data-hystclose>
+              <svg class="modal__close-icon" width="15" height="15" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-cross"></use>
+              </svg>
+            </button>
+            <div class="title-md modal__title">An error has occurred!</div>
+            <div class="modal__status-text">An unexpected error occurred while sending the request, sending failed. Try submitting your request later.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/vendor-bundle.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
