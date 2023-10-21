@@ -312,7 +312,7 @@
             </ul>
           </nav>
           <div>
-            <button class="btn-reset btn" type="button">Get in touch</button>
+            <button class="btn-reset btn" type="button" data-hystmodal="#get-in-touch-modal">Get in touch</button>
           </div>
         </div>
         <div class="site-footer__copyright text-sm">
@@ -328,6 +328,38 @@
         </svg>
       </a>
     </div>
+    <div class="hystmodal hystmodal--simple" id="get-in-touch-modal" aria-hidden="true">
+      <div class="hystmodal__wrap">
+        <div class="hystmodal__window hystmodal__window--form" role="dialog" aria-modal="true">
+          <div class="modal">
+            <button class="btn-reset modal__close" type="button" aria-label="Close window" data-hystclose>
+              <svg class="modal__close-icon" width="15" height="15" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-cross"></use>
+              </svg>
+            </button>
+            <form class="form contact-form pt-5" id="get-in-touch-modal-form" autocomplete="false" data-validate>
+              <div class="row">
+                <div class="col-12 col-xl-6 mb-3">
+                  <label class="form__label">Your name (required)</label>
+                  <input class="form__input" type="text" name="Name" data-validate="name" required>
+                </div>
+                <div class="col-12 col-xl-6 mb-3">
+                  <label class="form__label">Your E-mail (required)</label>
+                  <input class="form__input" type="email" name="Email" data-validate="email" required>
+                </div>
+                <div class="col-12 mb-4">
+                  <label class="form__label">Your message (optional)</label>
+                  <textarea class="form__input form__textarea" type="text"></textarea>
+                </div>
+                <div class="col-12">
+                  <button class="btn-reset btn contact-form__submit" type="submit">Send</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="hystmodal hystmodal--simple" id="send-ok-modal" aria-hidden="true">
       <div class="hystmodal__wrap">
         <div class="hystmodal__window hystmodal__window--form" role="dialog" aria-modal="true">
@@ -337,23 +369,11 @@
                 <use xlink:href="img/sprite.svg#icon-cross"></use>
               </svg>
             </button>
-            <div class="title-md modal__title">Message sent successfully!</div>
-            <div class="modal__status-text">The manager will contact you shortly to clarify the details.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="hystmodal hystmodal--simple" id="send-error-modal" aria-hidden="true">
-      <div class="hystmodal__wrap">
-        <div class="hystmodal__window hystmodal__window--form" role="dialog" aria-modal="true">
-          <div class="modal">
-            <button class="btn-reset modal__close" type="button" aria-label="Close window" data-hystclose>
-              <svg class="modal__close-icon" width="15" height="15" aria-hidden="true">
-                <use xlink:href="img/sprite.svg#icon-cross"></use>
-              </svg>
-            </button>
-            <div class="title-md modal__title">An error has occurred!</div>
-            <div class="modal__status-text">An unexpected error occurred while sending the request, sending failed. Try submitting your request later.</div>
+            <div class="modal__successfull">
+              <div class="title-sm modal__successfull-title">Successfully!</div>
+              <div class="modal__successfull-text">We will contact you shortly</div>
+              <button class="btn-reset btn" type="button" data-hystclose>Close</button>
+            </div>
           </div>
         </div>
       </div>
