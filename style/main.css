@@ -1172,6 +1172,76 @@ h6 {
   }
 }
 
+.faq-item {
+  padding-bottom: 25px;
+
+  color: var(--main-text);
+
+  background-color: var(--main-bg);
+  border-bottom: 1px solid var(--border);
+
+  --cross-color: #99cb9a;
+  --cross-state-x: rotateZ(0);
+  --cross-state-y: rotateZ(90deg);
+}
+.faq-item[open] {
+  --cross-color: #3c3c3c;
+  --cross-state-x: rotateZ(180deg);
+  --cross-state-y: rotateZ(360deg);
+}
+.faq-item__question {
+  position: relative;
+
+  padding-right: 40px;
+
+  list-style: none;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+.faq-item__question::before,
+.faq-item__question::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  right: 5px;
+
+  width: 14px;
+  height: 2px;
+
+  background-color: var(--cross-color);
+  border-radius: 99em;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+
+  transition: -webkit-transform 0.35s ease-in-out;
+  transition:         transform 0.35s ease-in-out;
+  transition:         transform 0.35s ease-in-out, -webkit-transform 0.35s ease-in-out;
+}
+.faq-item__question::after {
+  -webkit-transform: var(--cross-state-x);
+          transform: var(--cross-state-x);
+}
+.faq-item__question::before {
+  -webkit-transform: var(--cross-state-y);
+          transform: var(--cross-state-y);
+}
+.faq-item__question::-webkit-details-marker {
+  display: none;
+}
+.faq-item__answer {
+  margin-top: 20px;
+}
+.faq-item__answer > *:first-child {
+  margin-top: 0;
+}
+.faq-item__answer > *:last-child {
+  margin-bottom: 0;
+}
+.faq-item__answer a {
+  text-decoration-color: inherit;
+}
+
 .burger {
   display: flex;
   width: 30px;
@@ -2348,4 +2418,190 @@ h6 {
 
   --btn-bg: var(--main-bg);
   --btn-color: var(--main-text);
+}
+.faq {
+  color: var(--main-text);
+
+  background-color: var(--main-bg);
+}
+.faq__list {
+  display: grid;
+  margin-bottom: 50px;
+
+  row-gap: 25px;
+}
+@media (min-width: 768px) {
+  .faq__list {
+    margin-bottom: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .faq__list {
+    margin-bottom: 100px;
+
+            column-gap: 30px;
+
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.instructions {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  color: var(--third-bright-color);
+
+  background-color: var(--third-bright-bg);
+}
+.instructions__header {
+  margin-bottom: 24px;
+
+  text-align: center;
+}
+.instructions__precautions-title {
+  text-align: center;
+}
+.instructions__cards {
+  margin-bottom: 50px;
+}
+.instructions__card {
+  height: 100%;
+  padding: 20px;
+
+  color: var(--main-text);
+
+  background-color: var(--main-bg);
+  border-radius: 24px;
+}
+.instructions__card--accent {
+  position: relative;
+
+  padding-top: 150px;
+  padding-bottom: 50px;
+
+  text-align: center;
+  color: var(--first-bright-color);
+
+  background-color: var(--first-bright-bg);
+}
+.instructions__card--accent::before {
+  content: "!";
+  position: absolute;
+  top: 30px;
+  left: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 86px;
+  height: 86px;
+
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1;
+
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.instructions__card ul {
+  padding-left: 24px;
+}
+.instructions__subtitle {
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .instructions {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .instructions__header {
+    margin-bottom: 40px;
+  }
+  .instructions__cards {
+    margin-bottom: 60px;
+  }
+  .instructions__card {
+    padding: 30px 20px;
+  }
+  .instructions__card--accent {
+    padding-top: 150px;
+    padding-bottom: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .instructions {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .instructions__header {
+    margin-bottom: 70px;
+  }
+  .instructions__cards {
+    margin-bottom: 100px;
+  }
+  .instructions__card {
+    padding: 40px;
+  }
+  .instructions__card--accent {
+    padding-top: 185px;
+    padding-bottom: 70px;
+  }
+  .instructions__card--accent::before {
+    top: 60px;
+  }
+}
+
+.resume {
+  position: relative;
+
+  padding-top: 180px;
+
+  text-align: center;
+}
+.resume::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 50%;
+
+  width: 174px;
+  height: 110px;
+
+  background-image: url("data:image/svg+xml,%3Csvg width='78' height='60' viewBox='0 0 78 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M75.1371 32.2126C75.1371 41.2264 61.7722 48.5224 61.2031 48.8238C61.053 48.9045 60.8854 48.9467 60.715 48.9467C60.5447 48.9467 60.377 48.9045 60.227 48.8238C59.6578 48.5224 46.293 41.2264 46.293 32.2126C46.2954 30.096 47.1373 28.0667 48.634 26.57C50.1307 25.0733 52.1599 24.2314 54.2766 24.229C56.9357 24.229 59.2638 25.3725 60.715 27.3053C62.1662 25.3725 64.4944 24.229 67.1534 24.229C69.2701 24.2314 71.2994 25.0733 72.7961 26.57C74.2928 28.0667 75.1347 30.096 75.1371 32.2126Z' fill='%23FBF5D9'/%3E%3Cpath d='M52.4096 19.6836C54.504 33.9918 34.9843 48.6788 34.1509 49.2894C33.9315 49.4523 33.6752 49.5584 33.4048 49.5979C33.1344 49.6375 32.8584 49.6094 32.6015 49.5162C31.628 49.1701 8.71767 40.6942 6.62318 26.3859C6.13513 23.0254 7 19.6086 9.02805 16.885C11.0561 14.1613 14.0817 12.3534 17.4411 11.8578C21.662 11.2399 25.6233 12.514 28.3761 15.2449C30.2306 11.8396 33.6605 9.48353 37.8814 8.86566C41.2419 8.37761 44.6588 9.24248 47.3824 11.2705C50.106 13.2986 51.9139 16.3242 52.4096 19.6836Z' fill='%23FCD6E1'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+@media (min-width: 768px) {
+  .resume {
+    padding-top: 200px;
+  }
+  .resume::before {
+    top: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .resume {
+    padding-top: 300px;
+  }
+  .resume::before {
+    top: 100px;
+
+    width: 255px;
+    height: 160px;
+  }
+}
+@media (min-width: 1200px) {
+  .resume {
+    padding-top: 315px;
+  }
+  .resume::before {
+    top: 110px;
+  }
 }

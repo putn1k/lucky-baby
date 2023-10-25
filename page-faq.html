@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style/vendor-bundle.css">
+  <link rel="stylesheet" href="style/main.css">
+  <title>FAQ Page</title>
+</head>
+
+<body class="indent-reset site">
+  <div aria-hidden="true" id="site-top"></div>
+  <div class="site__container">
+    <header class="site__header site-header">
+      <div class="container">
+        <div class="site-header__row">
+          <div class="site-header__logo">
+            <a href="page-main.html">
+              <img src="img/sprite.svg#logo" width="166" height="36" alt="Lucky Baby">
+            </a>
+          </div>
+          <div class="site-header__tablet-contact-list">
+            <ul class="site-header__contact-list">
+              <li>
+                <a href="#">Instagram</a>
+              </li>
+              <li>
+                <a href="mailto:info@luckybaby.ae">info@luckybaby.ae</a>
+              </li>
+            </ul>
+          </div>
+          <div class="site-header__top-cart header-cart">
+            <a class="header-cart__link" href="page-cart.html">
+              <svg width="35" height="35" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-cart"></use>
+              </svg>
+              <span class="header-cart__count">1</span>
+            </a>
+          </div>
+          <div class="site-header__burger">
+            <button class="btn-reset" type="button" aria-label="Menu" data-trigger="nav">
+              <span class="burger">
+                <svg class="burger__icon" width="30" viewBox="0 0 50 50" aria-hidden="true">
+                  <path class="burger__line burger__line--top" d="M7 9.5H43.2105C46.5807 9.5 50 12.2586 50 17.0692C50 21.8798 47.5313 24.5 43.2105 24.5H25" />
+                  <path class="burger__line burger__line--middle" d="m 7,25 h 36" />
+                  <path class="burger__line burger__line--bottom" d="M43 40.5H6.78947C6.78947 40.5 0 39.7451 0 32.6264C0 25.5076 6.78947 24.5 6.78947 24.5H25" />
+                </svg>
+              </span>
+            </button>
+          </div>
+          <div class="site-header__site-nav site-header__site-nav--is-not-tablet text-sm" data-popup="nav">
+            <nav class="header-site-nav">
+              <ul>
+                <li>
+                  <a href="page-blog.html">Blog</a>
+                </li>
+                <li>
+                  <a href="page-faq.html">FAQ</a>
+                </li>
+                <li>
+                  <a href="page-contact.html">Contact Us</a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="site-header__contact-list">
+              <li>
+                <a href="#">Instagram</a>
+              </li>
+              <li>
+                <a href="mailto:info@luckybaby.ae">info@luckybaby.ae</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="site-header__row site-header__row--bordered">
+          <div class="site-header__catalog-btn">
+            <button class="btn-reset btn" type="button" data-trigger="catalog">
+              <span class="burger">
+                <svg class="burger__icon" width="30" viewBox="0 0 50 50" aria-hidden="true">
+                  <path class="burger__line burger__line--top" d="M7 9.5H43.2105C46.5807 9.5 50 12.2586 50 17.0692C50 21.8798 47.5313 24.5 43.2105 24.5H25" />
+                  <path class="burger__line burger__line--middle" d="m 7,25 h 36" />
+                  <path class="burger__line burger__line--bottom" d="M43 40.5H6.78947C6.78947 40.5 0 39.7451 0 32.6264C0 25.5076 6.78947 24.5 6.78947 24.5H25" />
+                </svg>
+              </span>
+              <span>Catalog</span>
+            </button>
+          </div>
+          <div class="site-header__cart header-cart">
+            <a class="header-cart__link" href="page-cart.html">
+              <svg width="35" height="35" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-cart"></use>
+              </svg>
+              <span class="header-cart__count">1</span>
+            </a>
+          </div>
+          <div class="site-header__site-nav-bottom">
+            <nav class="header-site-nav">
+              <ul>
+                <li>
+                  <a href="page-blog.html">Blog</a>
+                </li>
+                <li>
+                  <a href="page-faq.html">FAQ</a>
+                </li>
+                <li>
+                  <a href="page-contact.html">Contact Us</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="site-header__catalog-nav" data-popup="catalog">
+            <nav class="header-catalog-nav">
+              <ul>
+                <li>
+                  <a href="page-products.html">Pacifier Holders & Teethers</a>
+                </li>
+                <li>
+                  <a href="page-products.html">Pacifier Cases</a>
+                </li>
+                <li>
+                  <a href="page-products.html">Sensory Toys</a>
+                </li>
+                <li>
+                  <a href="page-products.html">Infant Shoes</a>
+                </li>
+                <li>
+                  <a href="page-products.html">Gift Bundles</a>
+                </li>
+                <li>
+                  <a href="page-products.html">Accessories</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <header class="fix-site-header">
+      <div class="container fix-site-header__inner">
+        <div class="fix-site-header__catalog-btn">
+          <button class="btn-reset btn" type="button" data-trigger="catalog-fix">
+            <span class="burger">
+              <svg class="burger__icon" width="30" viewBox="0 0 50 50" aria-hidden="true">
+                <path class="burger__line burger__line--top" d="M7 9.5H43.2105C46.5807 9.5 50 12.2586 50 17.0692C50 21.8798 47.5313 24.5 43.2105 24.5H25" />
+                <path class="burger__line burger__line--middle" d="m 7,25 h 36" />
+                <path class="burger__line burger__line--bottom" d="M43 40.5H6.78947C6.78947 40.5 0 39.7451 0 32.6264C0 25.5076 6.78947 24.5 6.78947 24.5H25" />
+              </svg>
+            </span>
+            <span>Catalog</span>
+          </button>
+        </div>
+        <div class="fix-site-header__cart header-cart">
+          <a class="header-cart__link" href="page-cart.html">
+            <svg width="35" height="35" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-cart"></use>
+            </svg>
+            <span class="header-cart__count">1</span>
+          </a>
+        </div>
+        <div class="fix-site-header__nav container" data-popup="catalog-fix">
+          <nav class="header-catalog-nav">
+            <ul>
+              <li>
+                <a href="page-products.html">Pacifier Holders & Teethers</a>
+              </li>
+              <li>
+                <a href="page-products.html">Pacifier Cases</a>
+              </li>
+              <li>
+                <a href="page-products.html">Sensory Toys</a>
+              </li>
+              <li>
+                <a href="page-products.html">Infant Shoes</a>
+              </li>
+              <li>
+                <a href="page-products.html">Gift Bundles</a>
+              </li>
+              <li>
+                <a href="page-products.html">Accessories</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="site__content">
+      <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+        <div class="container">
+          <a href="page-main.html">Main</a>&ensp;&#47;&ensp;<span class="current-item">FAQ</span>
+        </div>
+      </div>
+      <main class="site__entry">
+        <section class="faq">
+          <div class="container">
+            <h1 class="title-md page-title">FAQ</h1>
+            <ul class="list-reset faq__list">
+              <li>
+                <details class="faq-item">
+                  <summary class="title-sm faq-item__question">Are silicone accessories safe for my baby to use?</summary>
+                  <div class="faq-item__answer">Yes, silicone accessories are generally considered safe for babies. They are non-toxic, BPA-free, and free from harmful chemicals.</div>
+                </details>
+              </li>
+              <li>
+                <details class="faq-item">
+                  <summary class="title-sm faq-item__question">How do silicone accessories help with teething pain?</summary>
+                  <div class="faq-item__answer">Silicone accessories provide a soft and soothing texture for babies to chew on, which helps alleviate teething pain by providing gentle pressure and relief to their sore gums.</div>
+                </details>
+              </li>
+              <li>
+                <details class="faq-item">
+                  <summary class="title-sm faq-item__question">What age group are silicone accessories suitable for?</summary>
+                  <div class="faq-item__answer">Silicone accessories are typically designed for babies and can be used from newborns up to around three years old, depending on the specific product.</div>
+                </details>
+              </li>
+              <li>
+                <details class="faq-item">
+                  <summary class="title-sm faq-item__question">How do personalized silicone accessories make a unique gift for a baby?</summary>
+                  <div class="faq-item__answer">By customizing silicone accessories with names, favorite colors, or cute designs, they become special and sentimental gifts that can be cherished as keepsakes.</div>
+                </details>
+              </li>
+              <li>
+                <details class="faq-item">
+                  <summary class="title-sm faq-item__question">How do silicone accessories enhance color perception in babies?</summary>
+                  <div class="faq-item__answer">The bright and eye-catching colors of silicone accessories can stimulate a baby's visual development, helping improve their color perception and recognition skills.</div>
+                </details>
+              </li>
+              <li>
+                <details class="faq-item">
+                  <summary class="title-sm faq-item__question">Can silicone accessories help babies with their motor skill development?</summary>
+                  <div class="faq-item__answer">Absolutely! Silicone accessories, such as teething bracelets or sensory toys, encourage babies to explore and manipulate objects, aiding in the development of their fine motor skills and hand-eye coordination.</div>
+                </details>
+              </li>
+              <li>
+                <details class="faq-item">
+                  <summary class="title-sm faq-item__question">Can silicone accessories be used as sensory toys?</summary>
+                  <div class="faq-item__answer">Yes, the different textures and shapes of silicone accessories can provide a sensory experience for babies, stimulating their touch and sensory exploration.</div>
+                </details>
+              </li>
+              <li>
+                <details class="faq-item">
+                  <summary class="title-sm faq-item__question">Are silicone accessories suitable for babies with allergies or sensitivities?</summary>
+                  <div class="faq-item__answer">Silicone is hypoallergenic and generally well-tolerated by babies with allergies or sensitivities.</div>
+                </details>
+              </li>
+              <li>
+                <details class="faq-item">
+                  <summary class="title-sm faq-item__question">Do silicone accessories have any additional benefits apart from teething relief?</summary>
+                  <div class="faq-item__answer">Yes, silicone accessories can serve various purposes. They can be used as soothing toys, provide tactile stimulation, and aid in the development of oral skills.</div>
+                </details>
+              </li>
+              <li>
+                <details class="faq-item">
+                  <summary class="title-sm faq-item__question">Can silicone accessories be refrigerated or frozen to provide extra relief for teething babies?</summary>
+                  <div class="faq-item__answer">Yes, many silicone accessories can be safely refrigerated or frozen, which helps provide additional cooling sensation and relief for teething babies.</div>
+                </details>
+              </li>
+              <li>
+                <details class="faq-item">
+                  <summary class="title-sm faq-item__question">Are silicone accessories designed to be easily cleaned on the go?</summary>
+                  <div class="faq-item__answer">Many silicone accessories are designed with convenience in mind and can be easily wiped clean with a cloth or baby wipes while you're out and about.</div>
+                </details>
+              </li>
+              <li>
+                <details class="faq-item">
+                  <summary class="title-sm faq-item__question">Are silicone accessories odorless and tasteless?</summary>
+                  <div class="faq-item__answer">Silicone is known for being odorless and tasteless, making it a safe and neutral material for babies to interact with during feeding or teething.</div>
+                </details>
+              </li>
+              <li>
+                <details class="faq-item">
+                  <summary class="title-sm faq-item__question">Do silicone accessories contain any latex or phthalates?</summary>
+                  <div class="faq-item__answer">No, silicone accessories are latex-free and typically free from phthalates and other harmful chemicals, making them safe for babies with latex allergies.</div>
+                </details>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="instructions">
+          <div class="container">
+            <div class="row">
+              <header class="col-12 col-md-10 col-xl-8 col-xxl-6 offset-md-1 offset-xl-2 offset-xxl-3 instructions__header">
+                <h2 class="indent-reset title-md mb-4">Usage instructions & Precautions</h2>
+                <div>To make the most of your silicone accessories for children, please follow these instructions:</div>
+              </header>
+            </div>
+            <div class="row">
+              <div class="col-12 col-xxl-10 offset-xxl-1 instructions__cards">
+                <div class="row">
+                  <div class="col-12 col-md-6 mb-4">
+                    <div class="instructions__card">
+                      <div class="title-sm instructions__subtitle">1. Fixing the Pacifier or Teethe</div>
+                      <ul>
+                        <li>Using the provided loop, securely attach the pacifier or teether to the silicone holder</li>
+                        <li>Ensure the item is tightly fastened to prevent any accidental detachment</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-4">
+                    <div class="instructions__card">
+                      <div class="title-sm instructions__subtitle">2. Attaching to Baby's Clothes or Stroller</div>
+                      <ul>
+                        <li>Once the pacifier or teether is secured, use the clip to attach the holder to your baby's clothing or stroller</li>
+                        <li>Ensure a firm grip to prevent the holder from coming loose and potentially falling</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-4">
+                    <div class="instructions__card">
+                      <div class="title-sm instructions__subtitle">Care Method</div>
+                      <ul>
+                        <li>Before the initial use, it is highly recommended to perform an antibacterial treatment using baby wet wipes. This helps maintain hygiene and cleanliness</li>
+                        <li>In case of heavy contamination, rinse the silicone holder with warm water</li>
+                        <li>Avoid washing the silicone accessories in sterilizers or dishwashers, as these may cause damage to the products or compromise their performance</li>
+                        <li>Please avoid wetting the wooden clip as it may cause damage</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-4">
+                    <div class="instructions__card instructions__card--accent">
+                      <div class="title-sm instructions__subtitle">Attention: To ensure the durability of your silicone accessories, it's crucial to protect the metal and wooden elements from moisture. Avoid exposing them to excessive water or damp environments</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-xxl-10 offset-xxl-1 instructions__precautions">
+                <h3 class="indent-reset title-md mb-4 mb-xl-5 instructions__precautions-title">Precautions</h3>
+                <div class="row">
+                  <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <div class="instructions__card">
+                      Always use the holder under adult supervision to prevent any potential hazards
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <div class="instructions__card">
+                      Before every use, carefully inspect the product to ensure its integrity
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <div class="instructions__card">
+                      Do not use the holder if any signs of damage, such as cracks or tears, are detected
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="resume">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-xl-8 col-xxl-6 offset-xl-2 offset-xxl-3">
+                <div class="title-sm mb-4 mb-xl-5">Rest assured, our silicone accessories are made from 100% non-toxic, FDA-approved, food-grade silicone, providing a safe and healthy option for your child's comfort and well-being. </div>
+                <div>We prioritize your child's safety and satisfaction, and our silicone accessories have been designed to meet the highest quality standards.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer class="site__footer site-footer">
+      <div class="container">
+        <div class="site-footer__main">
+          <div class="site-footer__logo">
+            <a href="page-main.html">
+              <img src="img/sprite.svg#logo-light" width="166" height="36" alt="Lucky Baby">
+            </a>
+            <div class="site-footer__logo-text text-sm">Dubai, United Arab Emirates</div>
+          </div>
+          <nav class="site-footer__nav">
+            <div class="site-footer__catalog-nav">
+              <ul>
+                <li>
+                  <a href="page-products.html">Pacifier Holders & Teethers</a>
+                </li>
+                <li>
+                  <a href="page-products.html">Pacifier Cases</a>
+                </li>
+                <li>
+                  <a href="page-products.html">Sensory Toys</a>
+                </li>
+                <li>
+                  <a href="page-products.html">Infant Shoes</a>
+                </li>
+                <li>
+                  <a href="page-products.html">Gift Bundles</a>
+                </li>
+                <li>
+                  <a href="page-products.html">Accessories</a>
+                </li>
+              </ul>
+            </div>
+            <ul>
+              <li>
+                <a href="page-blog.html">Blog</a>
+              </li>
+              <li>
+                <a href="page-faq.html">FAQ</a>
+              </li>
+              <li>
+                <a href="page-contact.html">Contact Us</a>
+              </li>
+            </ul>
+          </nav>
+          <div>
+            <button class="btn-reset btn" type="button" data-hystmodal="#get-in-touch-modal">Get in touch</button>
+          </div>
+        </div>
+        <div class="site-footer__copyright text-sm">
+          <div>2023 &copy; Lucky Baby Accessories</div>
+          <div><a href="page-policy.html" target="_blank" rel="nofollow noreferer noopener">Privacy policy</a></div>
+        </div>
+      </div>
+    </footer>
+    <div class="scroll-top" id="scroll-top">
+      <a class="scroll-top__link" href="#site-top" aria-label="Scroll to top">
+        <svg width="20" height="10" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#icon-up"></use>
+        </svg>
+      </a>
+    </div>
+    <div class="hystmodal hystmodal--simple" id="get-in-touch-modal" aria-hidden="true">
+      <div class="hystmodal__wrap">
+        <div class="hystmodal__window hystmodal__window--form" role="dialog" aria-modal="true">
+          <div class="modal">
+            <button class="btn-reset modal__close" type="button" aria-label="Close window" data-hystclose>
+              <svg class="modal__close-icon" width="15" height="15" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-cross"></use>
+              </svg>
+            </button>
+            <form class="form contact-form pt-5" id="get-in-touch-modal-form" autocomplete="false" data-validate>
+              <div class="row">
+                <div class="col-12 col-xl-6 mb-3">
+                  <label class="form__label">Your name (required)</label>
+                  <input class="form__input" type="text" name="Name" data-validate="name" required>
+                </div>
+                <div class="col-12 col-xl-6 mb-3">
+                  <label class="form__label">Your E-mail (required)</label>
+                  <input class="form__input" type="email" name="Email" data-validate="email" required>
+                </div>
+                <div class="col-12 mb-4">
+                  <label class="form__label">Your message (optional)</label>
+                  <textarea class="form__input form__textarea" type="text"></textarea>
+                </div>
+                <div class="col-12">
+                  <button class="btn-reset btn contact-form__submit" type="submit">Send</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hystmodal hystmodal--simple" id="send-ok-modal" aria-hidden="true">
+      <div class="hystmodal__wrap">
+        <div class="hystmodal__window hystmodal__window--form" role="dialog" aria-modal="true">
+          <div class="modal">
+            <button class="btn-reset modal__close" type="button" aria-label="Close window" data-hystclose>
+              <svg class="modal__close-icon" width="15" height="15" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-cross"></use>
+              </svg>
+            </button>
+            <div class="modal__successfull">
+              <div class="title-sm modal__successfull-title">Successfully!</div>
+              <div class="modal__successfull-text">We will contact you shortly</div>
+              <button class="btn-reset btn" type="button" data-hystclose>Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/vendor-bundle.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
