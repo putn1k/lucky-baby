@@ -1,0 +1,24 @@
+.faq {
+  color: var(--main-text);
+  background-color: var(--main-bg);
+
+  &__list {
+    display: grid;
+    row-gap: 25px;
+    margin-bottom: 50px;
+  }
+
+  @include media-min ($md) {
+    &__list {
+      margin-bottom: 60px;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__list {
+      margin-bottom: 100px;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 30px;
+    }
+  }
+}

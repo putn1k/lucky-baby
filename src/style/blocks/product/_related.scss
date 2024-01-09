@@ -1,0 +1,7 @@
+.related {
+  @include media-min ($md) {
+    &__link {
+      text-align: right;
+    }
+  }
+}

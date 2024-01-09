@@ -1,0 +1,23 @@
+<section class="related">
+  <div class="container">
+    <div class="row align-items-md-center">
+      <div class="col-12 col-md-8 mb-4 mb-xxl-5">
+        <h2 class="indent-reset title-md">Related products</h2>
+      </div>
+      <div class="col-12 order-md-3 mb-4">
+        <div class="related__products slider">
+          <ul class="list-reset swiper-wrapper slider__wrapper">
+            @include('../common/product-card.html', {tag: 'li', title: 'Pacifier Holder - White Sheep', className: 'swiper-slide related__product ', isPromo: true, isLazy: true})
+            @include('../common/product-card.html', {tag: 'li', title: 'Pacifier Holder', className: 'swiper-slide related__product ', isLazy: true})
+            @include('../common/product-card.html', {tag: 'li', title: 'Pacifier Holder - White Sheep', className: 'swiper-slide related__product ', isPromo: true, isLazy: true})
+            @include('../common/product-card.html', {tag: 'li', title: 'Pacifier Holder', className: 'swiper-slide related__product ', isLazy: true})
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 mb-md-4 mb-xxl-5 related__link">
+        <a class="btn"
+           href="page-shop.html">See all products</a>
+      </div>
+    </div>
+  </div>
+</section>

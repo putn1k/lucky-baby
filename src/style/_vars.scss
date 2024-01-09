@@ -2,6 +2,7 @@
   --white: #FFFFFF;
   --black: #3C3C3C;
   --gray: #D6D6D6;
+  --light-gray: #F5F5F5;
   --pink: #C76F89;
   --pink-50: #FBC9D8;
   --pink-40: #FCD6E1;
@@ -18,11 +19,16 @@
   --btn-color: var(--black);
   --btn-bg: var(--pink-40);
   --btn-hover-bg: var(--pink-50);
+  --options-btn-color: var(--black);
+  --options-btn-bg: var(--light-gray);
+  --options-btn-active-color: var(--white);
+  --options-btn-active-bg: var(--green);
   --blog-btn-color: var(--accent);
   --blog-btn-bg: var(--white);
   --scroll-top-btn-color: var(--accent);
   --scroll-top-icon-color: var(--white);
   --border: var(--gray);
+  --border-colored: var(--pink-40);
   --new-price-color: var(--green);
   --first-bright-color: var(--white);
   --first-bright-bg: var(--green);

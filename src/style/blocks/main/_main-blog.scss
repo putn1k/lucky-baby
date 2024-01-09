@@ -42,3 +42,27 @@
     padding-bottom: 120px;
   }
 }
+
+.blog {
+  --pagination-align: flex-start;
+
+  &__list {
+    @include list-reset;
+
+    display: grid;
+    grid-template-columns: repeat(var(--blog-cols, 1), 1fr);
+    gap: 30px;
+
+    @include media-min ($md) {
+      --blog-cols: 2;
+    }
+
+    @include media-min ($xl) {
+      --blog-cols: 3;
+    }
+
+    @include media-min ($xxl) {
+      --blog-cols: 4;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.accent-note {
+  color: #DFEFE0;
+  background-color: #99CB9A;
+  padding: 30px 16px;
+  text-transform: uppercase;
+  border-radius: 24px;
+  text-align: center;
+
+  & a {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+
+  @include media-min ($md) {
+    padding: 45px 34px;
+  }
+
+  @include media-min ($xl) {
+    padding: 45px 84px;
+  }
+
+  @include media-min ($xl) {
+    padding: 64px 70px;
+  }
+}

@@ -1,0 +1,21 @@
+.product-reviews {
+  --pt: 40px;
+  --wavy-height: 80px;
+  --wavy-pattern: url('../img/default/wave.svg');
+  --content-pt: calc(var(--wavy-height) + var(--pt));
+
+  padding-top: var(--content-pt);
+  padding-bottom: 60px;
+
+  @include media-min ($md) {
+    --pt: 60px;
+
+    padding-bottom: 70px;
+  }
+
+  @include media-min ($xl) {
+    --pt: 80px;
+
+    padding-bottom: 80px;
+  }
+}

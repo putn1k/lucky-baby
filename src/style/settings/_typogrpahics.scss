@@ -30,6 +30,12 @@ h6 {
   color: var(--accent);
 }
 
+.page-title {
+  @include indent-reset;
+
+  margin-bottom: 30px;
+}
+
 .title-lg {
   font-size: 36px;
   line-height: 0.9;
@@ -59,6 +65,10 @@ h6 {
 
   .title-sm {
     font-size: 18px;
+  }
+
+  .page-title {
+    margin-bottom: 40px;
   }
 }
 

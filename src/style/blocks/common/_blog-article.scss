@@ -1,0 +1,129 @@
+.blog-article {
+  &__intro {
+    padding: 30px;
+    color: var(--second-bright-color);
+    background-color: var(--second-bright-bg);
+    border-radius: 24px;
+  }
+
+  &__poster {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 290px;
+
+    & img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 24px;
+    }
+  }
+
+  &__content {
+    @include cms-text;
+  }
+
+  &__short {
+    max-width: 915px;
+  }
+
+  &__decor {
+    padding: 30px 20px;
+    padding-top: 90px;
+    border: 1px solid var(--border-colored);
+    border-radius: 24px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 25px;
+      left: 30px;
+      width: 72px;
+      height: 46px;
+      background-image: url("data:image/svg+xml,%3Csvg width='78' height='60' viewBox='0 0 78 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M75.1371 32.2126C75.1371 41.2264 61.7722 48.5224 61.2031 48.8238C61.053 48.9045 60.8854 48.9467 60.715 48.9467C60.5447 48.9467 60.377 48.9045 60.227 48.8238C59.6578 48.5224 46.293 41.2264 46.293 32.2126C46.2954 30.096 47.1373 28.0667 48.634 26.57C50.1307 25.0733 52.1599 24.2314 54.2766 24.229C56.9357 24.229 59.2638 25.3725 60.715 27.3053C62.1662 25.3725 64.4944 24.229 67.1534 24.229C69.2701 24.2314 71.2994 25.0733 72.7961 26.57C74.2928 28.0667 75.1347 30.096 75.1371 32.2126Z' fill='%23FBF5D9'/%3E%3Cpath d='M52.4096 19.6836C54.504 33.9918 34.9843 48.6788 34.1509 49.2894C33.9315 49.4523 33.6752 49.5584 33.4048 49.5979C33.1344 49.6375 32.8584 49.6094 32.6015 49.5162C31.628 49.1701 8.71767 40.6942 6.62318 26.3859C6.13513 23.0254 7 19.6086 9.02805 16.885C11.0561 14.1613 14.0817 12.3534 17.4411 11.8578C21.662 11.2399 25.6233 12.514 28.3761 15.2449C30.2306 11.8396 33.6605 9.48353 37.8814 8.86566C41.2419 8.37761 44.6588 9.24248 47.3824 11.2705C50.106 13.2986 51.9139 16.3242 52.4096 19.6836Z' fill='%23FCD6E1'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &--warning {
+      height: 100%;
+
+      &::before {
+        width: 50px;
+        height: 50px;
+        background-image: url("data:image/svg+xml,%3Csvg width='59' height='59' viewBox='0 0 59 59' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='29.5' cy='29.5' r='29.5' fill='%23FCD6E1'/%3E%3Cpath d='M30 20.002C28.9723 20.002 27.9867 20.4102 27.26 21.1369C26.5333 21.8636 26.125 22.8492 26.125 23.877C26.125 26.797 27.332 30.429 27.938 32.076C28.0946 32.4961 28.3767 32.858 28.7459 33.1126C29.1151 33.3671 29.5536 33.502 30.002 33.499C30.906 33.499 31.741 32.957 32.065 32.081C32.671 30.441 33.875 26.827 33.875 23.877C33.875 22.8492 33.4667 21.8636 32.74 21.1369C32.0133 20.4102 31.0277 20.002 30 20.002ZM30.001 35C29.3377 35 28.7016 35.2635 28.2325 35.7325C27.7635 36.2015 27.5 36.8376 27.5 37.501C27.5 38.1643 27.7635 38.8004 28.2325 39.2694C28.7016 39.7385 29.3377 40.002 30.001 40.002C30.6643 40.002 31.3004 39.7385 31.7695 39.2694C32.2385 38.8004 32.502 38.1643 32.502 37.501C32.502 36.8376 32.2385 36.2015 31.7695 35.7325C31.3004 35.2635 30.6643 35 30.001 35Z' fill='%23C76F89'/%3E%3C/svg%3E");
+      }
+    }
+  }
+
+  &__conclusion {
+    padding: 30px;
+    color: var(--first-bright-color);
+    background-color: var(--first-bright-bg);
+    border-radius: 24px;
+  }
+
+  &__back-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    font-weight: 500;
+    line-height: 1.4;
+    padding: var(--btn-offset, var(--btn-offset-vertical, 14px) var(--btn-offset-horizontal, 28px));
+    color: var(--blog-btn-color);
+    background-color: var(--blog-btn-bg);
+    border: 1px solid var(--blog-btn-color);
+    border-radius: 99em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  @include media-min ($xl) {
+    &__intro {
+      padding: 60px;
+      border-radius: 40px;
+    }
+
+    &__poster {
+      height: 100%;
+      padding-bottom: 0;
+      border-radius: 40px;
+    }
+
+    &__decor {
+      padding-top: 120px;
+
+      &::before {
+        width: 113px;
+        height: 71px;
+      }
+
+      &--warning {
+        &::before {
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+
+    &__conclusion {
+      padding: 60px;
+      border-radius: 40px;
+    }
+
+    &__back-link {
+      transition: color .15s ease-in-out, background-color .2s ease-in-out;
+
+      &:hover {
+        color: var(--blog-btn-bg);
+        background-color: var(--blog-btn-color);
+      }
+    }
+  }
+}

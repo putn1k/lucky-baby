@@ -13,8 +13,11 @@ import {
 const isSendOk = () => {
   simpleModal.open( '#send-ok-modal' );
 };
-const isSendError = () => {
-  simpleModal.open( '#send-error-modal' );
+const isSendError = ( target ) => {
+  target.classList.add( 'shaked' );
+  setTimeout( () => {
+    target.classList.remove( 'shaked' );
+  }, 1500 );
 };
 
 export const validateForms = () => {

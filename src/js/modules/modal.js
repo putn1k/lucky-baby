@@ -13,17 +13,6 @@ const initModals = () => {
   initSimpleModal();
 };
 
-const setSubjectText = ( modal ) => {
-  if ( modal.starter && modal.starter.dataset.subject ) {
-    const subjectNode = modal.openedWindow.querySelector( 'input[name="Subject"]' );
-    if ( subjectNode ) {
-      subjectNode.value = modal.starter.dataset.subject;
-    }
-  }
-};
-
-simpleModal.config.beforeOpen = setSubjectText;
-
 export {
   simpleModal,
   initModals,

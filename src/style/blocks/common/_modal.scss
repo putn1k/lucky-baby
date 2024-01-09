@@ -1,17 +1,15 @@
 .modal {
   position: relative;
   margin: 0 auto;
-  padding: 28px;
-  padding-top: 75px;
   width: 100%;
-  max-width: 390px;
+  max-width: var(--modal-width, 390px);
   color: var(--main-text);
-  background-color: var(--main-bg);
+  background-color: transparent;
   border-radius: 10px;
 
   &__close {
     position: absolute;
-    top: 20px;
+    top: 10px;
     right: 20px;
     display: flex;
     justify-content: center;
@@ -20,6 +18,46 @@
     width: 35px;
     height: 35px;
     cursor: pointer;
+    z-index: 1;
   }
 
+  &__successfull {
+    position: relative;
+    min-width: 330px;
+    color: var(--main-text);
+    background-color: var(--main-bg);
+    padding: 40px 30px;
+    padding-top: 120px;
+    border-radius: 24px;
+    text-align: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      width: 60px;
+      height: 60px;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='30' fill='%2399CB9A'/%3E%3Cpath d='M27.0001 34.1698L23.5301 30.6998C23.3432 30.5129 23.0896 30.4078 22.8251 30.4078C22.5607 30.4078 22.3071 30.5129 22.1201 30.6998C21.9332 30.8868 21.8281 31.1404 21.8281 31.4048C21.8281 31.5358 21.8539 31.6654 21.904 31.7864C21.9541 31.9073 22.0276 32.0173 22.1201 32.1098L26.3001 36.2898C26.6901 36.6798 27.3201 36.6798 27.7101 36.2898L38.2901 25.7098C38.4771 25.5229 38.5822 25.2693 38.5822 25.0048C38.5822 24.7404 38.4771 24.4868 38.2901 24.2998C38.1032 24.1129 37.8496 24.0078 37.5851 24.0078C37.3207 24.0078 37.0671 24.1129 36.8801 24.2998L27.0001 34.1698Z' fill='white'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__successfull-title {
+    margin-bottom: 16px;
+  }
+
+  &__successfull-text {
+    margin-bottom: 30px;
+  }
+
+  @include media-min ($xl) {
+    --modal-width: 900px;
+
+    &__successfull {
+      min-width: 500px;
+    }
+  }
 }

@@ -51,6 +51,9 @@ const initSlider = ( selector, options = {} ) => {
 };
 
 const sendData = ( evt, url, isOk, isError ) => {
+  const errorNode = document.documentElement.classList.contains( 'hystmodal__opened' ) ?
+    evt.target.closest( '.hystmodal__window' ) :
+    evt.target;
   disableSubmitBtn( evt.target );
   fetch( url, {
       method: 'POST',
@@ -61,15 +64,26 @@ const sendData = ( evt, url, isOk, isError ) => {
         isOk();
         evt.target.reset();
       } else {
-        isError();
+        isError( errorNode );
       }
     } )
     .catch( () => {
-      isError();
+      isError( errorNode );
     } )
     .finally( () => {
       enableSubmitBtn( evt.target );
     } );
+};
+
+const getCookieByName = ( name ) => {
+  const matches = document.cookie.match( new RegExp( '(?:^|; )' + name.replace( /([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1' ) + '=([^;]*)' ) ); // eslint-disable-line
+  return matches ? decodeURIComponent( matches[ 1 ] ) : undefined;
+};
+
+const writeCookieByName = ( name ) => {
+  const date = new Date;
+  date.setDate( date.getDate() + 30 );
+  document.cookie = name + '=Expired; path=/; expires=' + date.toUTCString();
 };
 
 export {
@@ -77,4 +91,6 @@ export {
   iosVhFix,
   initSlider,
   sendData,
+  getCookieByName,
+  writeCookieByName,
 };

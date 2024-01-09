@@ -1,0 +1,50 @@
+.cb-links {
+  position: fixed;
+  bottom: 110px;
+  right: max(15px, calc((100% - $xxl - 100px) / 2));
+  ;
+  display: grid;
+  row-gap: 6px;
+  z-index: 1;
+
+  &--left {
+    bottom: 60px;
+    left: max(15px, calc((100% - $xxl - 135px) / 2));
+    right: auto;
+  }
+
+  &--is-animation {
+    --anim-props: shake 3000ms infinite;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 50%;
+
+    & img {
+      display: block;
+      width: 45px;
+      height: 45px;
+      animation: var(--anim-props);
+    }
+  }
+
+
+  @include media-min ($xl) {
+    bottom: 100px;
+
+    &--left {
+      bottom: 50px;
+    }
+
+    &__link {
+      & img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}

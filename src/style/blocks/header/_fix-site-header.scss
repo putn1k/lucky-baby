@@ -44,6 +44,7 @@
   @include media-min ($xl) {
     &__inner {
       flex-wrap: nowrap;
+      min-height: 35px;
     }
 
     &__catalog-btn {

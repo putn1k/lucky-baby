@@ -1,0 +1,15 @@
+.shop-list {
+  @include list-reset;
+
+  display: grid;
+  grid-template-columns: repeat(var(--product-cols, 2), 1fr);
+  gap: 30px;
+
+  @include media-min ($md) {
+    --product-cols: 3;
+  }
+
+  @include media-min ($xxl) {
+    --product-cols: 4;
+  }
+}

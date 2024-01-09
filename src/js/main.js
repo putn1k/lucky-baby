@@ -7,6 +7,10 @@ import {
 } from './modules/modal.js';
 
 import {
+  initCouponModal,
+} from './modules/coupon.js';
+
+import {
   initPopupMenus,
   initFixHeader
 } from './modules/header.js';
@@ -32,5 +36,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
     validateForms();
     initPopupMenus();
     initSliders();
+    initCouponModal();
   } );
 } );

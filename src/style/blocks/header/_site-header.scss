@@ -1,4 +1,12 @@
 .site-header {
+  &__banner {
+    padding: 6px 0;
+    color: var(--main-text-inv);
+    background-color: var(--accent);
+    text-transform: uppercase;
+    text-align: center;
+  }
+
   &__row {
     position: relative;
     display: flex;
@@ -122,10 +130,11 @@
 
     &__contact-list {
       display: flex;
+      margin-left: -40px;
 
       &>li {
         margin-bottom: 0;
-        margin-right: 40px;
+        margin-left: 40px;
       }
     }
 
@@ -163,7 +172,8 @@
       flex-direction: row-reverse;
       justify-content: space-between;
       position: static;
-      padding: 0 55px;
+      padding: 0;
+      padding-left: 55px;
       background-color: transparent;
       max-width: none;
       flex-grow: 1;
@@ -190,6 +200,7 @@
 
     &__top-cart {
       order: 3;
+      padding-left: 55px;
     }
 
     &__catalog-btn {

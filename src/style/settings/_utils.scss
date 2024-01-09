@@ -33,8 +33,16 @@ input[type="checkbox"].visually-hidden {
   @include btn-reset;
 }
 
+.is-hidden {
+  display: none !important;
+}
+
 .is-expanded {
   --burger-position: rotate(135deg);
   --burger-middle-position: rotate(90deg);
   --burger-dashoffset: -59px;
+}
+
+.shaked {
+  animation: shake 0.6s;
 }

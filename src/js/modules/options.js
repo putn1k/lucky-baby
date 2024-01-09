@@ -33,9 +33,17 @@ export const Options = {
     },
   },
   Requests: {
-    HandlerURL: 'https://jsonplaceholder.typicode.com/posts',
+    HandlerURL: 'WP_Options.AJAX_URL',
   },
   Swiper: {
+    CrosSells: {
+      slidesPerView: 1.4,
+      breakpoints: {
+        1200: {
+          slidesPerView: 2.4,
+        },
+      },
+    },
     Bestsellers: {
       slidesPerView: 1.4,
       breakpoints: {
@@ -61,6 +69,35 @@ export const Options = {
         },
         1600: {
           slidesPerView: 4,
+        },
+      },
+    },
+    Product: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      preloadImages: false,
+      loop: true,
+      lazy: true,
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true,
+      },
+    },
+    ProductThumbs: {
+      slidesPerView: 4,
+      spaceBetween: 6,
+      breakpoints: {
+        768: {
+          direction: 'vertical'
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 16,
+          direction: 'horizontal'
+        },
+        1600: {
+          slidesPerView: 4,
+          direction: 'vertical'
         },
       },
     },
