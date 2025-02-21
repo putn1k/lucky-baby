@@ -35,6 +35,12 @@
     color: var(--first-bright-color);
     background-color: var(--first-bright-bg);
     border-radius: 99em;
+
+    &--os {
+      top: auto;
+      bottom: 10px;
+      background-color: var(--out-of-stock-bg);
+    }
   }
 
   &__title {
@@ -64,6 +70,17 @@
     }
   }
 
+  @include media-min ($md) {
+    &__badge {
+      &--os {
+        bottom: auto;
+        left: auto;
+        top: 10px;
+        right: 10px;
+      }
+    }
+  }
+
   @include media-min ($xl) {
     &__link {
       &:hover {
@@ -85,6 +102,11 @@
     &__badge {
       top: 30px;
       left: 30px;
+
+      &--os {
+        left: auto;
+        right: 30px;
+      }
     }
   }
 }

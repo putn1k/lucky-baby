@@ -11,6 +11,9 @@
     @if(context.isPromo) {
     <span class="product-card__badge">Sale</span>
     }
+    @if(context.isStock) {
+    <span class="product-card__badge product-card__badge--os">Out of stock</span>
+    }
   </div>
   <h3 class="indent-reset title-sm product-card__title">@title</h3>
   <div class="product-card__price">
